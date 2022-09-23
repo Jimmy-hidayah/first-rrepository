@@ -9,7 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Liberty NFT Marketplace - HTML CSS Template</title>
+    <title>Liberty NFT Marketplace</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('template/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('template/assets/css/templatemo-liberty-market.css')}}">
     <link rel="stylesheet" href="{{asset('template/assets/css/owl.css')}}">
     <link rel="stylesheet" href="{{asset('template/assets/css/animate.css')}}">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
 TemplateMo 577 Liberty Market
@@ -59,11 +59,11 @@ https://templatemo.com/tm-577-liberty-market
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="explore.html">Explore</a></li>
-                        <li><a href="details.html">Item Details</a></li>
-                        <li><a href="author.html">Author</a></li>
+                        <li><a href="#explore">Explore</a></li>
+                        <li><a href="#itemdetails">Item Details</a></li>
+                        <li><a href="#categories">Categories</a></li>
                         <li><a href="{{ route('register') }}">Create Account</a></li>
-                    </ul>   
+                    </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -108,8 +108,8 @@ https://templatemo.com/tm-577-liberty-market
     </div>
   </div>
   <!-- ***** Main Banner Area End ***** -->
-  
-  <div class="categories-collections">
+
+  <div class="categories-collections" id="categories">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -190,71 +190,74 @@ https://templatemo.com/tm-577-liberty-market
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="collections">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-heading">
-                  <div class="line-dec"></div>
-                  <h2>Explore Some Hot <em>Collections</em> In Market.</h2>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="owl-collection owl-carousel">
-                  <div class="item">
-                    <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
-                    <div class="down-content">
-                      <h4>Mutant Bored Ape Yacht Club</h4>
-                      <span class="collection">Items In Collection:<br><strong>310/340</strong></span>
-                      <span class="category">Category:<br><strong>Digital Crypto</strong></span>
-                      <div class="main-button">
-                        <a href="explore.html">Explore Mutant</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
-                    <div class="down-content">
-                      <h4>Bored Ape Kennel Club</h4>
-                      <span class="collection">Items In Collection:<br><strong>324/324</strong></span>
-                      <span class="category">Category:<br><strong>Visual Art</strong></span>
-                      <div class="main-button">
-                        <a href="explore.html">Explore Bored Ape</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
-                    <div class="down-content">
-                      <h4>Genesis Collective Statue</h4>
-                      <span class="collection">Items In Collection:<br><strong>380/394</strong></span>
-                      <span class="category">Category:<br><strong>Music Art</strong></span>
-                      <div class="main-button">
-                        <a href="explore.html">Explore Genesis</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
-                    <div class="down-content">
-                      <h4>Worldwide Artwork Ground</h4>
-                      <span class="collection">Items In Collection:<br><strong>426/468</strong></span>
-                      <span class="category">Category:<br><strong>Blockchain</strong></span>
-                      <div class="main-button">
-                        <a href="explore.html">Explore Worldwide</a>
-                      </div>
-                    </div>
+
+        <section id="explore">
+          <div class="col-lg-12">
+            <div class="collections">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="section-heading">
+                    <div class="line-dec"></div>
+                    <h2>Explore Some Hot <em>Collections</em> In Market.</h2>
                   </div>
                 </div>
+                <div class="col-lg-12">
+                  <div class="owl-collection owl-carousel">
+                    <div class="item">
+                      <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
+                      <div class="down-content">
+                        <h4>Mutant Bored Ape Yacht Club</h4>
+                        <span class="collection">Items In Collection:<br><strong>310/340</strong></span>
+                        <span class="category">Category:<br><strong>Digital Crypto</strong></span>
+                        <div class="main-button">
+                          <a href="explore.html">Explore Mutant</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
+                      <div class="down-content">
+                        <h4>Bored Ape Kennel Club</h4>
+                        <span class="collection">Items In Collection:<br><strong>324/324</strong></span>
+                        <span class="category">Category:<br><strong>Visual Art</strong></span>
+                        <div class="main-button">
+                          <a href="explore.html">Explore Bored Ape</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
+                      <div class="down-content">
+                        <h4>Genesis Collective Statue</h4>
+                        <span class="collection">Items In Collection:<br><strong>380/394</strong></span>
+                        <span class="category">Category:<br><strong>Music Art</strong></span>
+                        <div class="main-button">
+                          <a href="explore.html">Explore Genesis</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{{asset('template/assets/images/collection-01.jpg')}}" alt="">
+                      <div class="down-content">
+                        <h4>Worldwide Artwork Ground</h4>
+                        <span class="collection">Items In Collection:<br><strong>426/468</strong></span>
+                        <span class="category">Category:<br><strong>Blockchain</strong></span>
+                        <div class="main-button">
+                          <a href="explore.html">Explore Worldwide</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div> 
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
 
-  <div class="create-nft">
+  <div class="create-nft" >
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
@@ -305,7 +308,7 @@ https://templatemo.com/tm-577-liberty-market
     </div>
   </div>
 
-  <div class="currently-market">
+  <div class="currently-market" id="itemdetails">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
