@@ -13,19 +13,14 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="{{ route('home') }}" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
 
                                 </div>
                             </li>
 
-
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Users</a>
-
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Product</a>
+                                <a class="nav-link" href="{{ route('produk.index') }}" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Product</a>
                                 <div id="submenu-5" class="collapse submenu" style="">
 
                                 </div>

@@ -20,7 +20,7 @@ class AdminMiddleware
         if(Auth::check() && Auth()->user()->level === 1) {
             return $next($request);
         }
-        return abort(403);
+        return redirect()->route('user');
 
     }
 }

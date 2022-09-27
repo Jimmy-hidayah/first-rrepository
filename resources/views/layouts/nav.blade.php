@@ -8,11 +8,6 @@
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
-                            <div id="custom-search" class="top-search-bar">
-                                <input class="form-control" type="text" placeholder="Search..">
-                            </div>
-                        </li>
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
@@ -66,7 +61,7 @@
                                 <li class="connection-list">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="{{asset('dashboard/assets/images/github.png')}}" alt="" > <span>SuperRare </span></a>
+                                            <a href="https://superrare.com  " class="connection-item"><img src="{{asset('dashboard/assets/images/github.png')}}" alt="" > <span>SuperRare </span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
                                             <a href="https://www.binance.com" class="connection-item"><img src="{{asset('dashboard/assets/images/dribbble.png')}}" alt="" > <span>Binance </span></a>

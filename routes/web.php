@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,10 @@ Auth::routes();
 Route::middleware('auth', 'admin')->group(function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('admin/kategori', KategoriController::class);
+    Route::resource('admin/produk', ProdukController::class);
+});
+Route::middleware('auth', )->group(function() {
+   Route::get('user', function() {
+        return view('p');
+   })->name('user');
 });

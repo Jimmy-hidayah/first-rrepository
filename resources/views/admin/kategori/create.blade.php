@@ -11,13 +11,13 @@
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="card">
-                <h5 class="card-header">Top Selling Products</h5>
+                <h5 class="card-header">Your Categories</h5>
                 <div class="card-body p-0">
                     <form action="{{ route('kategori.store') }}" method="post">
                         @csrf
                         <div class="form-group">
-                          <label for="exampleInputEmail1">category</label>
-                          <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your category">
+                          <label for="exampleInputEmail1">Category</label>
+                          <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" add your category">
                         </div>
 
                         <div class="form-group form-check">
