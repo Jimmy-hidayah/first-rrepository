@@ -109,6 +109,6 @@ class ProdukController extends Controller
     	$produk = produk::all();
 
     	$pdf = PDF::loadview('admin.product.cetak',['produks'=>$produk]);
-    	return $pdf->download('laporan-pegawai.pdf');
+    	return $pdf->stream();
     }
 }
