@@ -2,7 +2,12 @@
 
 @section('content')
 <div class="dashboard-wrapper">
-
+    @if (session('success'))
+    <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>{{ session('success') }}</strong>
+    </div>
+    @endif
     <!-- ============================================================== -->
     <!-- pagehader  -->
     <!-- ============================================================== -->
@@ -29,11 +34,7 @@
         <a class="btn btn-success btn-sm" href="{{ route('produk.create') }}">Create New</a>
     </div>
 
-    @if(session()->has('success'))
-        <label class="alert alert-success w-100">{{session('success')}}</label>
-    @elseif(session()->has('error'))
-        <label class="alert alert-danger w-100">{{session('error')}}</label>
-    @endif
+
 
     <table class="table table-striped">
         <thead>

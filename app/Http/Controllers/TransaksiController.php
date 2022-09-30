@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\KategoriRequest;
+use App\Http\Requests\TransaksiRequest;
 use App\Models\kategori;
+use App\Models\produk;
+use App\Models\transaksi;
 use Illuminate\Http\Request;
 
-class KategoriController extends Controller
+class TransaksiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +17,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $kategoris = kategori::all();
-        return view('admin.kategori.index', compact(['kategoris']));
+        $transaksi = transaksi::all();
+        return view('admin.transaction.index', compact(['transaksi']));
     }
 
     /**
@@ -26,7 +28,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        return view('admin.kategori.create');
+        $transaksi = produk::get();
+        return view('admin.transaction.create', compact(['transaksi']));
     }
 
     /**
@@ -35,13 +38,15 @@ class KategoriController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(KategoriRequest $request)
+    public function store(TransaksiRequest $request)
     {
         $validate = $request->validated();
 
-        kategori::create($validate);
+        $validate['user_id'] = auth()->user()->id;
 
-        return redirect()->route('kategori.index')->with('success', 'Your category was successfully created');
+        transaksi::create($validate);
+
+        return redirect()->route('transaksi.index')->with('success', 'Your category was successfully created');
     }
 
     /**
@@ -52,7 +57,8 @@ class KategoriController extends Controller
      */
     public function show($id)
     {
-        //
+        $transaction = transaksi::findOrFail($id);
+        return view('admin.transaction.view', compact(['transaction']));
     }
 
     /**
@@ -63,8 +69,9 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        return view('admin.kategori.edit', compact(['kategori']));
+        $produks = produk::get();
+        $transaction = transaksi::findOrFail($id);
+        return view('admin.transaction.edit', compact(['transaction', 'produks']));
     }
 
     /**
@@ -74,12 +81,12 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(KategoriRequest $request, $id)
+    public function update(TransaksiRequest $request, $id)
     {
        $validate = $request->validated();
-        $kategori = Kategori::findOrFail($id);
-        $kategori->update($validate);
-        return redirect()->route('kategori.index')->with('success', 'Edit successfully');
+        $transaction = Transaksi::findOrFail($id);
+        $transaction->update($validate);
+        return redirect()->route('transaksi.index')->with('success', 'Edit successfully');
     }
 
     /**
@@ -90,8 +97,8 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        $kategori->delete();
-        return redirect()->route('kategori.index')->with('success', 'Delete successfully');
+        $transaction = Transaksi::findOrFail($id);
+        $transaction->delete();
+        return redirect()->route('transaksi.index')->with('success', 'Delete successfully');
     }
 }

@@ -25,6 +25,7 @@
         @include('layouts.nav')
         @include('layouts.sidebar')
         <div class="container-fluid  dashboard-content">
+
         @yield('content')
         </div>
     </div>

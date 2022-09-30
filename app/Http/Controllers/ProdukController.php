@@ -6,6 +6,7 @@ use App\Http\Requests\ProdukRequest;
 use App\Models\kategori;
 use App\Models\produk;
 use Illuminate\Http\Request;
+use PDF;
 
 class ProdukController extends Controller
 {
@@ -43,7 +44,7 @@ class ProdukController extends Controller
 
         produk::create($validate);
 
-        return redirect()->route('produk.index');
+        return redirect()->route('produk.index')->with('success', 'Your category was successfully created');
     }
 
     /**
@@ -82,7 +83,7 @@ class ProdukController extends Controller
        $validate = $request->validated();
         $kategori = Produk::findOrFail($id);
         $kategori->update($validate);
-        return redirect()->route('produk.index');
+        return redirect()->route('produk.index')->with('success', 'Edit successfully');
     }
 
     /**
@@ -95,6 +96,19 @@ class ProdukController extends Controller
     {
         $kategori = Produk::findOrFail($id);
         $kategori->delete();
-        return redirect()->route('produk.index');
+        return redirect()->route('produk.index')->with('success', 'Delete successfully');
+    }
+
+    public function laporan(){
+        $produks = produk::all();
+        return view('admin.product.laporan', compact(['produks']));
+    }
+
+    public function laporan_cetak()
+    {
+    	$produk = produk::all();
+
+    	$pdf = PDF::loadview('admin.product.cetak',['produks'=>$produk]);
+    	return $pdf->download('laporan-pegawai.pdf');
     }
 }

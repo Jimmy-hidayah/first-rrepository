@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class transaksi extends Model
 {
     use HasFactory;
+    public function produk() {
+        return $this->belongsTo(produk::class);
+    }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+    protected $guarded = ['id'];
 }

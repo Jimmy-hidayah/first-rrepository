@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\KategoriRequest;
-use App\Models\kategori;
+use App\Http\Requests\LaporanRequest;
+use App\Models\laporan;
 use Illuminate\Http\Request;
 
-class KategoriController extends Controller
+class LaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $kategoris = kategori::all();
-        return view('admin.kategori.index', compact(['kategoris']));
+        $laporans = laporan::all();
+        return view('admin.laporan.index', compact(['laporans']));
     }
 
     /**
@@ -26,7 +26,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        return view('admin.kategori.create');
+        return view('admin.laporan.create');
     }
 
     /**
@@ -35,13 +35,13 @@ class KategoriController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(KategoriRequest $request)
+    public function store(LaporanRequest $request)
     {
         $validate = $request->validated();
 
-        kategori::create($validate);
+        laporan::create($validate);
 
-        return redirect()->route('kategori.index')->with('success', 'Your category was successfully created');
+        return redirect()->route('laporan.index')->with('success', 'Your category was successfully created');
     }
 
     /**
@@ -63,8 +63,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        return view('admin.kategori.edit', compact(['kategori']));
+        $kategori = Laporan::findOrFail($id);
+        return view('admin.laporan.edit', compact(['laporan']));
     }
 
     /**
@@ -74,12 +74,12 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(KategoriRequest $request, $id)
+    public function update(LaporanRequest $request, $id)
     {
        $validate = $request->validated();
-        $kategori = Kategori::findOrFail($id);
-        $kategori->update($validate);
-        return redirect()->route('kategori.index')->with('success', 'Edit successfully');
+        $laporan = Laporan::findOrFail($id);
+        $laporan->update($validate);
+        return redirect()->route('laporan.index')->with('success', 'Edit successfully');
     }
 
     /**
@@ -90,8 +90,9 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        $kategori->delete();
-        return redirect()->route('kategori.index')->with('success', 'Delete successfully');
+        $laporan = Laporan::findOrFail($id);
+        $laporan->delete();
+        return redirect()->route('laporan.index')->with('success', 'Delete successfully');
     }
 }
+

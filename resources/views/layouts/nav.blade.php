@@ -2,7 +2,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">LIberty NFT Market</a>
+                <a class="navbar-brand" href="index.html">Liberty NFT Market</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -94,8 +94,6 @@
                                     <h5 class="mb-0 text-white nav-user-name">Jim Hidayah Wahid</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
                                 <form action="{{route('logout')}}" method="post">
                                     @csrf
                                     <button class="btn btn-primary" type="submit">Logout</button>

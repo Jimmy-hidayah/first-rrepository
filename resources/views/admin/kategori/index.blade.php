@@ -2,7 +2,12 @@
 
 @section('content')
 <div class="dashboard-wrapper">
-
+    @if (session('success'))
+    <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>{{ session('success') }}</strong>
+    </div>
+    @endif
     <!-- ============================================================== -->
     <!-- pagehader  -->
     <!-- ============================================================== -->

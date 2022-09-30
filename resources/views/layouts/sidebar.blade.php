@@ -29,7 +29,7 @@
                                 Features
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Transaction </a>
+                                <a class="nav-link" href="{{ route('transaksi.index') }}" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Transaction </a>
 
                             </li>
                             <li class="nav-item">
@@ -39,9 +39,15 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Report</a>
-                                <div id="submenu-10" class="collapse submenu" style="">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Report</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('laporan-product') }}">Laporan product <span class="badge badge-secondary">New</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/general.html">Laporan transaksi</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
