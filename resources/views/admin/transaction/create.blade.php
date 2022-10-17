@@ -46,9 +46,9 @@
                               </div>
 
                             <select class="form-select" name="produk_id" aria-label="Default select example">
-                                @foreach ($transaksi as $transaksi)
+                                @foreach ($kategoris as $kategori)
 
-                                <option value="{{ $transaksi->id }}">{{ $transaksi->nama }}</option>
+                                <option value="{{ $kategori->id }}">{{ $kategori->nama }}</option>
                                 @endforeach
 
                               </select>

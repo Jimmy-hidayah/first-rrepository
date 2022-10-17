@@ -6,6 +6,8 @@ use App\Http\Requests\LaporanRequest;
 use App\Models\laporan;
 use Illuminate\Http\Request;
 
+use PDF;
+
 class LaporanController extends Controller
 {
     /**

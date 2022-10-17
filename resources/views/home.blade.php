@@ -48,7 +48,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="text-muted">NFT's</h5>
+                                <h5 class="text-muted">Product</h5>
                                 <div class="metric-value d-inline-block">
                                     <h1 class="mb-1 text-primary">4,200 </h1>
                                 </div>
@@ -64,7 +64,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="text-muted">Revenue</h5>
+                                <h5 class="text-muted">Category</h5>
                                 <div class="metric-value d-inline-block">
                                     <h1 class="mb-1 text-primary">$5,656</h1>
                                 </div>
@@ -81,7 +81,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="text-muted"> Crypto Growth</h5>
+                                <h5 class="text-muted"> Transaction</h5>
                                 <div class="metric-value d-inline-block">
                                     <h1 class="mb-1 text-primary">+28.45% </h1>
                                 </div>

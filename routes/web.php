@@ -29,7 +29,9 @@ Route::middleware('auth', 'admin')->group(function() {
     Route::resource('admin/produk', ProdukController::class);
     Route::resource('admin/transaksi', TransaksiController::class);
     Route::get('admin/laporan/product', [ProdukController::class, 'laporan'])->name('laporan-product');
-    Route::get('admin/laporan/product/cetak', [ProdukController::class, 'laporan_cetak'])->name('laporan-product-cetak');
+    Route::get('cetakproduk', [ProdukController::class, 'laporan_cetak'])->name('cetakproduk');
+    Route::get('admin/laporan/transaction', [TransaksiController::class, 'laporan'])->name('laporan-transaction');
+    Route::get('cetaktransaksi', [TransaksiController::class, 'laporan_cetak'])->name('cetaktransaksi');
 });
 Route::middleware('auth', )->group(function() {
    Route::get('user', function() {

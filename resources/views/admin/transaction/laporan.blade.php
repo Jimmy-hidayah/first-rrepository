@@ -14,13 +14,13 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="page-header">
-                <h3 class="mb-2">Dashboard Report Product </h3>
+                <h3 class="mb-2">Dashboard Report Transaction </h3>
                 <p class="pageheader-text">Lorem ipsum dolor sit ametllam fermentum ipsum eu porta consectetur adipiscing elit.Nullam vehicula nulla ut egestas rhoncus.</p>
                 <div class="page-breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Report Product </li>
+                            <li class="breadcrumb-item active" aria-current="page">Report Transaction </li>
                         </ol>
                     </nav>
                 </div>
@@ -34,24 +34,25 @@
 
 
     <table class="table table-striped">
-        <a href="/cetakproduk" class="btn btn-primary">Print report</a>
+        <a href="/cetaktransaksi" class="btn btn-primary">Print report</a>
         <thead>
         <tr>
             <th>Created At</th>
             <th>Name</th>
-
             <th>Price</th>
+            <th>Total</th>
+            <th>Date</th>
         </tr>
         </thead>
         <tbody>
 
-        @foreach($produks as $product)
+        @foreach($transaksis as $transaction)
             <tr>
-                <td>{{ $product->created_at }}</td>
-                <td>{{ $product->nama }}</td>
-
-                <td>{{ $product->harga }}</td>
-
+                <td>{{ $transaction->created_at }}</td>
+                <td>{{ $transaction->nama_produk }}</td>
+                <td>{{ $transaction->harga_produk }}</td>
+                <td>{{ $transaction->jumlah_produk }}</td>
+                <td>{{ $transaction->tanggal }}</td>
             </tr>
         @endforeach
 

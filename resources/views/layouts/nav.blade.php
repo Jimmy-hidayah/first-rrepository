@@ -64,7 +64,7 @@
                                             <a href="https://superrare.com  " class="connection-item"><img src="{{asset('dashboard/assets/images/github.png')}}" alt="" > <span>SuperRare </span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="https://www.binance.com" class="connection-item"><img src="{{asset('dashboard/assets/images/dribbble.png')}}" alt="" > <span>Binance </span></a>
+                                            <a href="https://blockparty.co" class="connection-item"><img src="{{asset('dashboard/assets/images/dribbble.png')}}" alt="" > <span>Blockparty </span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
                                             <a href="https://mintable.com" class="connection-item"><img src="{{asset('dashboard/assets/images/dropbox.png')}}" alt="" > <span>Mintable</span></a>

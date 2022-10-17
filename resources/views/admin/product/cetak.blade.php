@@ -1,8 +1,6 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="dashboard-wrapper">
-    <table class="table table-striped">
+<h2>Laporan Produk</h2>
+    <table border="1">
         <thead>
         <tr>
             <th>Created At</th>
@@ -13,7 +11,7 @@
         </thead>
         <tbody>
 
-        {{-- @foreach($produks as $product)
+        @foreach($produks as $product)
             <tr>
                 <td>{{ $product->created_at }}</td>
                 <td>{{ $product->nama }}</td>
@@ -21,12 +19,7 @@
                 <td>{{ $product->harga }}</td>
 
             </tr>
-        @endforeach --}}
+        @endforeach
 
         </tbody>
     </table>
-
-</div>
-
-
-@endsection

@@ -6,6 +6,7 @@ use App\Http\Requests\ProdukRequest;
 use App\Models\kategori;
 use App\Models\produk;
 use Illuminate\Http\Request;
+
 use PDF;
 
 class ProdukController extends Controller
@@ -109,6 +110,6 @@ class ProdukController extends Controller
     	$produk = produk::all();
 
     	$pdf = PDF::loadview('admin.product.cetak',['produks'=>$produk]);
-    	return $pdf->stream();
+    	return $pdf->download('produk.pdf');
     }
 }

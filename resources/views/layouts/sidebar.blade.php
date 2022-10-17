@@ -43,10 +43,10 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('laporan-product') }}">Laporan product <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="{{ route('laporan-product') }}">Product Report <span class="badge badge-secondary">New</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general.html">Laporan transaksi</a>
+                                            <a class="nav-link" href="{{ route('laporan-transaction') }}">Transaction Report</a>
                                         </li>
                                     </ul>
                                 </div>

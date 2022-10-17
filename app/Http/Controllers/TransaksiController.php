@@ -8,6 +8,8 @@ use App\Models\produk;
 use App\Models\transaksi;
 use Illuminate\Http\Request;
 
+use PDF;
+
 class TransaksiController extends Controller
 {
     /**
@@ -28,8 +30,8 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        $transaksi = produk::get();
-        return view('admin.transaction.create', compact(['transaksi']));
+        $kategoris = produk::get();
+        return view('admin.transaction.create', compact(['kategoris']));
     }
 
     /**
@@ -40,6 +42,7 @@ class TransaksiController extends Controller
      */
     public function store(TransaksiRequest $request)
     {
+
         $validate = $request->validated();
 
         $validate['user_id'] = auth()->user()->id;
@@ -100,5 +103,17 @@ class TransaksiController extends Controller
         $transaction = Transaksi::findOrFail($id);
         $transaction->delete();
         return redirect()->route('transaksi.index')->with('success', 'Delete successfully');
+    }
+    public function laporan(){
+        $transaksis = transaksi::all();
+        return view('admin.transaction.laporan', compact(['transaksis']));
+    }
+
+    public function laporan_cetak()
+    {
+    	$transaksi = transaksi::all();
+
+    	$pdf = PDF::loadview('admin.transaction.cetak',['transaksis'=>$transaksi]);
+    	return $pdf->download('transaksi.pdf');
     }
 }
